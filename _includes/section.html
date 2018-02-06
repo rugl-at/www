@@ -1,0 +1,23 @@
+{{blok._editable}}
+<div class="container py-5">
+  <div class="row d-flex align-items-center">
+    
+    {% if blok.align == 'left' %}
+    <div class="col-5 col-md">
+      <img class="img-fluid" src="{{blok.image}}" alt="{{blok.headline}}">
+    </div>
+    {% endif %}
+    
+    <div class="col-7">
+      <h2>{{blok.headline}}</h2>
+      {{blok.text|markdownify}}
+    </div>
+
+    {% if blok.align == 'right' %}
+    <div class="col-5 col-md">
+      <img class="img-fluid" src="{{blok.image}}" alt="{{blok.headline}}">
+    </div>
+    {% endif %}
+    
+  </div>
+</div>

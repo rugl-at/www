@@ -1,0 +1,8 @@
+{{blok._editable}}
+<div class="container py-5">
+  <div class="row">
+    {% for blok in blok.columns %}
+      {% include {{blok.component}}.html blok=blok %}
+    {% endfor %}
+  </div>
+</div>
